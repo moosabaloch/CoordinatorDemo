@@ -12,15 +12,16 @@ protocol CoordinatorFactoryProtocol {
     func instantiateApplicationCoordinator() -> AppCoordinator
 
     func instantiateSideMenuCoordinator(routerProtocol: RouterProtocol) -> SideMenuCoordinator
+    func instantiateAuthCoordinator(routerProtocol: RouterProtocol) -> AuthCoordinator
+}
+
+protocol AuthViewControllerFactory {
+    func instantiateChooseLoginRegisterViewController() -> ChooseLoginOrRegisterVC
+    func instantiateLoginViewController() -> LoginVC
+    func instantiateRegisterViewController() -> RegisterVC 
 }
 
 
-//protocol AuthViewControllerFactory {
-//    func instantiateChooseLoginRegisterViewController() -> ChooseLoginRegisterViewController
-//    func instantiateLoginViewController() -> LoginViewController
-//    func instantiateRegisterViewController() -> RegisterViewController
-//}
-//
 protocol SideMenuViewControllerFactory {
     func instantiateSideMenuViewController() -> SideMenuViewController
 }

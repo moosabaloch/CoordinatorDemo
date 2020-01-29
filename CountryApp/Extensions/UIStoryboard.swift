@@ -12,4 +12,7 @@ extension UIStoryboard {
     static var sideMenu : UIStoryboard {
         return UIStoryboard.init(name: "SideMenu", bundle: Bundle.main)
     }
+    static var auth : UIStoryboard {
+        return UIStoryboard.init(name: "AuthStoryboard", bundle: Bundle.main)
+    }
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose Login Or RegisterVC-->
+        <scene sceneID="8Zy-ge-9Gy">
+            <objects>
+                <viewController storyboardIdentifier="ChooseLoginOrRegisterVC" id="y4x-dq-DVG" customClass="ChooseLoginOrRegisterVC" customModule="CountryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bko-jR-1oK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qI3-7K-r4L">
+                                <rect key="frame" x="167.5" y="438" width="79" height="30"/>
+                                <state key="normal" title="Go to Login"/>
+                                <connections>
+                                    <action selector="onLoginTap:" destination="y4x-dq-DVG" eventType="touchUpInside" id="XLL-uJ-juQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzc-14-FYe">
+                                <rect key="frame" x="158" y="351" width="98" height="30"/>
+                                <state key="normal" title="Go to Register"/>
+                                <connections>
+                                    <action selector="onRegisterTap:" destination="y4x-dq-DVG" eventType="touchUpInside" id="ww0-SB-b5L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qI3-7K-r4L" firstAttribute="centerY" secondItem="Pgi-m7-cqS" secondAttribute="centerY" id="KKA-7l-JgM"/>
+                            <constraint firstItem="qI3-7K-r4L" firstAttribute="centerX" secondItem="Pgi-m7-cqS" secondAttribute="centerX" id="PUu-YM-tJx"/>
+                            <constraint firstItem="qI3-7K-r4L" firstAttribute="centerX" secondItem="gzc-14-FYe" secondAttribute="centerX" id="oag-c9-EWC"/>
+                            <constraint firstItem="qI3-7K-r4L" firstAttribute="top" secondItem="gzc-14-FYe" secondAttribute="bottom" constant="57" id="t82-wm-pLr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pgi-m7-cqS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCK-FR-KLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="-535"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="w2g-HG-sib">
+            <objects>
+                <viewController storyboardIdentifier="RegisterVC" id="Xyw-7c-I1h" customClass="RegisterVC" customModule="CountryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gi8-Hj-AX9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-Wl-KJ2">
+                                <rect key="frame" x="190" y="294" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackButtonTap:" destination="Xyw-7c-I1h" eventType="touchUpInside" id="TXf-Oe-SAb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTz-7L-UDD">
+                                <rect key="frame" x="178.5" y="438" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="onRegisterButtonTap:" destination="Xyw-7c-I1h" eventType="touchUpInside" id="nSj-Nl-lkQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RTz-7L-UDD" firstAttribute="centerY" secondItem="a3h-kF-CRw" secondAttribute="centerY" id="689-XW-Sh4"/>
+                            <constraint firstItem="RTz-7L-UDD" firstAttribute="centerX" secondItem="GEA-Wl-KJ2" secondAttribute="centerX" id="9UH-qT-RZS"/>
+                            <constraint firstItem="RTz-7L-UDD" firstAttribute="top" secondItem="GEA-Wl-KJ2" secondAttribute="bottom" constant="114" id="fW8-PW-zWF"/>
+                            <constraint firstItem="RTz-7L-UDD" firstAttribute="centerX" secondItem="a3h-kF-CRw" secondAttribute="centerX" id="pak-lO-HGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a3h-kF-CRw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xe-7d-bQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-535"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="Rny-WF-HQv">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="2CO-Fb-a2F" customClass="LoginVC" customModule="CountryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w50-ea-Zah">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fb-fb-hZ9">
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackTap:" destination="2CO-Fb-a2F" eventType="touchUpInside" id="5sa-rc-Srq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-Yu-n4J">
+                                <rect key="frame" x="187" y="354" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onLoginTap:" destination="2CO-Fb-a2F" eventType="touchUpInside" id="AIO-Qq-RHj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="93J-3k-KV3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reT-Jk-fwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-535"/>
+        </scene>
+    </scenes>
+</document>

@@ -9,7 +9,7 @@
 import UIKit
 
 class AppCoordinator: BaseCoordinator {
- 
+    
     private let factory : Factory
     private let routerProtocol : RouterProtocol
     private var launchInstructor : LaunchInstructor
@@ -17,9 +17,9 @@ class AppCoordinator: BaseCoordinator {
     init(router: RouterProtocol , factory : Factory , launchInstructor : LaunchInstructor) {
         self.routerProtocol = router
         self.factory = factory
-        self.launchInstructor = LaunchInstructor.main//launchInstructor
+        self.launchInstructor = launchInstructor
     }
- 
+    
     
     override func start(with option: DeepLinkOption?) {
         if let _ = option {
@@ -34,21 +34,28 @@ class AppCoordinator: BaseCoordinator {
     }
     
     func runOnboarding()  {
-        
+        self.runMainFlow()
     }
     
     func runAuthFlow() {
-        
+        let coordinator = self.factory.instantiateAuthCoordinator(routerProtocol: routerProtocol)
+        coordinator.finishFlow = { [unowned self , unowned coordinator] in
+            self.removeDependency(coordinator)
+            self.launchInstructor = LaunchInstructor.configure(isAutorized: true, tutorialWasShown: false)
+            self.start()
+        }
+        self.addDependency(coordinator)
+        coordinator.start()
     }
     
     func runMainFlow()  {
         let coordinator = self.factory.instantiateSideMenuCoordinator(routerProtocol: routerProtocol)
-              coordinator.finishFlow = { [unowned self, unowned coordinator] in
-                  self.removeDependency(coordinator)
-                  self.launchInstructor = LaunchInstructor.configure()
-                  self.start()
-              }
-              self.addDependency(coordinator)
-              coordinator.start()
+        coordinator.finishFlow = { [unowned self, unowned coordinator] in
+            self.removeDependency(coordinator)
+            self.launchInstructor = LaunchInstructor.configure()
+            self.start()
+        }
+        self.addDependency(coordinator)
+        coordinator.start()
     }
 }

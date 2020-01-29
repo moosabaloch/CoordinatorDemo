@@ -9,7 +9,7 @@
 import UIKit
 
 typealias Factory = CoordinatorFactoryProtocol & ViewControllerFactory
-typealias ViewControllerFactory = SideMenuViewControllerFactory
+typealias ViewControllerFactory = SideMenuViewControllerFactory & AuthViewControllerFactory
 class DependencyContainer {
     
     // MARK: - Initialization
@@ -39,6 +39,11 @@ class DependencyContainer {
 
 // MARK: Coordinators Factory Stub
 extension DependencyContainer : CoordinatorFactoryProtocol {
+    
+    func instantiateAuthCoordinator(routerProtocol: RouterProtocol) -> AuthCoordinator {
+        return AuthCoordinator(routerProtocol: routerProtocol, factory: self)
+    }
+    
     func instantiateSideMenuCoordinator(routerProtocol router: RouterProtocol) -> SideMenuCoordinator {
         return SideMenuCoordinator(routerProtocol: router, factory: self)
     }
@@ -63,6 +68,29 @@ extension DependencyContainer : SideMenuViewControllerFactory {
         sideMenuViewController.viewModel = SideMenuViewModel() // Can pass service DI
         return sideMenuViewController
     }
+}
+
+
+extension DependencyContainer : AuthViewControllerFactory {
+    func instantiateChooseLoginRegisterViewController() -> ChooseLoginOrRegisterVC {
+        let loginOrRegisterVC = UIStoryboard
+            .auth
+            .instantiateViewController(withIdentifier: "ChooseLoginOrRegisterVC") as! ChooseLoginOrRegisterVC
+        return loginOrRegisterVC
+    }
+    
+    func instantiateLoginViewController() -> LoginVC {
+        return UIStoryboard
+            .auth
+            .instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+    }
+    
+    func instantiateRegisterViewController() -> RegisterVC {
+        return UIStoryboard
+            .auth
+            .instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
+    }
+    
     
     
 }
