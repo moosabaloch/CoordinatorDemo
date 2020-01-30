@@ -10,7 +10,7 @@ import Foundation
 
 class SideMenuCoordinator : BaseCoordinator , CoordinatorFinishOutput {
     // CoordinatorFinishOutput
-    var finishFlow: (() -> Void)?
+    var finishFlow: Closure?
     
     // MARK: Vars and Lets
     
@@ -28,9 +28,49 @@ class SideMenuCoordinator : BaseCoordinator , CoordinatorFinishOutput {
     
     private func showSideMenuViewController() {
         let vc = self.factory.instantiateSideMenuViewController()
+        vc.onSettingsTap = { [unowned self] in
+            self.startSettingsFlow()
+        }
+        vc.onOpenSearchController = {[unowned self] data in
+            self.startSearchCoordinatorFlow(data: data)
+        }
         self.routerProtocol.setRootModule(vc, hideBar: true)
-        
     }
-
+    
+    private func startSearchCoordinatorFlow(data : String?){
+        if let d = data {
+            let searchCoord = self.factory.instantiateSearchCoordinator(routerProtocol: self.routerProtocol, data: CoordinatorData.someData(d))
+            searchCoord.finishFlow = {[unowned self , unowned searchCoord] in
+                self.routerProtocol.popModule()
+                self.removeDependency(searchCoord)
+            }
+            self.addDependency(searchCoord)
+            searchCoord.start()
+        }else {
+            let searchCoord = self.factory.instantiateSearchCoordinator(routerProtocol: self.routerProtocol, data: CoordinatorData<Any>.noData)
+            searchCoord.finishFlow = {[unowned self , unowned searchCoord] in
+                self.routerProtocol.popModule()
+                self.removeDependency(searchCoord)
+            }
+            self.addDependency(searchCoord)
+            searchCoord.start()
+        }
+    }
+    
+    
+    
+//SearchCoordinator
+    private func startSettingsFlow(){
+        let settingsCoordinator = self.factory.instantiateSettingsCoordinator(routerProtocol: routerProtocol)
+        settingsCoordinator.finishFlow = {[unowned self , unowned settingsCoordinator] in
+            self.removeDependency(settingsCoordinator)
+        }
+        settingsCoordinator.logout = {[unowned self , unowned settingsCoordinator] in
+            self.removeDependency(settingsCoordinator)
+            self.finishFlow?()
+        }
+        self.addDependency(settingsCoordinator)
+        settingsCoordinator.start()
+    }
     
 }

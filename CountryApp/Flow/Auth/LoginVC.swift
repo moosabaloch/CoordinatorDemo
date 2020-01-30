@@ -35,3 +35,12 @@ class LoginVC: UIViewController , LoginProtocol {
     
 
 }
+
+//extension LoginVC : UIGestureRecognizerDelegate {
+//
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        return true
+//    }
+//}
+//self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+//self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true

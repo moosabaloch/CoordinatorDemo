@@ -7,6 +7,12 @@
 //
 
 import Foundation
+typealias Closure = (()->Void)
+typealias ClosureData<T> = ((T?)->Void)
+
+enum CoordinatorData<T> {
+    case someData(T) , noData
+}
 
 class BaseCoordinator: Coordinator {
     

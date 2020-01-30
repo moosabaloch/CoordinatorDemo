@@ -34,7 +34,14 @@ class AppCoordinator: BaseCoordinator {
     }
     
     func runOnboarding()  {
-        self.runMainFlow()
+        let coordinator = self.factory.instantiateOnboardingCoordinator(routerProtocol: routerProtocol)
+        coordinator.finishFlow = {[unowned self , unowned coordinator] in
+            self.removeDependency(coordinator)
+            self.launchInstructor = LaunchInstructor.configure(isAutorized: true, tutorialWasShown: true)
+            self.start()
+        }
+        self.addDependency(coordinator)
+        coordinator.start()
     }
     
     func runAuthFlow() {
@@ -52,7 +59,7 @@ class AppCoordinator: BaseCoordinator {
         let coordinator = self.factory.instantiateSideMenuCoordinator(routerProtocol: routerProtocol)
         coordinator.finishFlow = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
-            self.launchInstructor = LaunchInstructor.configure()
+            self.launchInstructor = LaunchInstructor.configure(isAutorized: false, tutorialWasShown: true)
             self.start()
         }
         self.addDependency(coordinator)

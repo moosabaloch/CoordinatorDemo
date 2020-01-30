@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="J26-Zf-KE3">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="peS-gf-KYf" customClass="SearchViewController" customModule="CountryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WHB-y1-ma6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31L-Sk-AuC">
+                                <rect key="frame" x="20" y="157" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugA-Ve-5LS">
+                                <rect key="frame" x="190" y="438" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="onBackTap:" destination="peS-gf-KYf" eventType="touchUpInside" id="RCO-IO-Tmf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="31L-Sk-AuC" firstAttribute="leading" secondItem="DHJ-mc-669" secondAttribute="leading" constant="20" id="Fo2-KQ-ntR"/>
+                            <constraint firstItem="ugA-Ve-5LS" firstAttribute="centerX" secondItem="DHJ-mc-669" secondAttribute="centerX" id="N4H-5T-5ma"/>
+                            <constraint firstItem="DHJ-mc-669" firstAttribute="trailing" secondItem="31L-Sk-AuC" secondAttribute="trailing" constant="20" id="Nh7-NN-yqY"/>
+                            <constraint firstItem="ugA-Ve-5LS" firstAttribute="centerY" secondItem="DHJ-mc-669" secondAttribute="centerY" id="pC9-uc-XID"/>
+                            <constraint firstItem="31L-Sk-AuC" firstAttribute="top" secondItem="DHJ-mc-669" secondAttribute="top" constant="113" id="qnL-VD-Wlt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DHJ-mc-669"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelView" destination="31L-Sk-AuC" id="8CE-Lh-INn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgK-L9-biu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

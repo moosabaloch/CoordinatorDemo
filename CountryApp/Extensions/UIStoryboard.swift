@@ -15,4 +15,14 @@ extension UIStoryboard {
     static var auth : UIStoryboard {
         return UIStoryboard.init(name: "AuthStoryboard", bundle: Bundle.main)
     }
+    static var onboarding : UIStoryboard {
+        return UIStoryboard.init(name: "OnboardingStoryboard", bundle: Bundle.main)
+    }
+    static var settings : UIStoryboard {
+        return UIStoryboard.init(name: "SettingsStoryboard", bundle: Bundle.main)
+    }
+    static var search : UIStoryboard {
+        return UIStoryboard.init(name: "SearchStoryboard", bundle: Bundle.main)
+    }
+    
 }

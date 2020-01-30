@@ -12,6 +12,15 @@
 		F456479C23E15F8C00A1F151 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456479B23E15F8C00A1F151 /* LoginVC.swift */; };
 		F456479E23E15FDF00A1F151 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456479D23E15FDF00A1F151 /* AuthCoordinator.swift */; };
 		F45647A223E171A100A1F151 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647A123E171A100A1F151 /* RegisterVC.swift */; };
+		F45647A523E1B4CF00A1F151 /* OnboardingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45647A423E1B4CF00A1F151 /* OnboardingStoryboard.storyboard */; };
+		F45647A723E1B4E500A1F151 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647A623E1B4E500A1F151 /* OnboardingVC.swift */; };
+		F45647A923E1B79100A1F151 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647A823E1B79100A1F151 /* OnboardingCoordinator.swift */; };
+		F45647AC23E1C95E00A1F151 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45647AB23E1C95E00A1F151 /* SettingsStoryboard.storyboard */; };
+		F45647AE23E1C98400A1F151 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647AD23E1C98400A1F151 /* SettingsVC.swift */; };
+		F45647B023E1CA6A00A1F151 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647AF23E1CA6A00A1F151 /* SettingsCoordinator.swift */; };
+		F45647B323E2B23800A1F151 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45647B223E2B23800A1F151 /* SearchStoryboard.storyboard */; };
+		F45647B523E2B24C00A1F151 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647B423E2B24C00A1F151 /* SearchViewController.swift */; };
+		F45647B723E2B4DD00A1F151 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45647B623E2B4DD00A1F151 /* SearchCoordinator.swift */; };
 		F49FDF8923E0C7E90055D96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FDF8823E0C7E90055D96D /* AppDelegate.swift */; };
 		F49FDF9223E0C7EB0055D96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49FDF9123E0C7EB0055D96D /* Assets.xcassets */; };
 		F49FDF9523E0C7EB0055D96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49FDF9323E0C7EB0055D96D /* LaunchScreen.storyboard */; };
@@ -59,6 +68,15 @@
 		F456479B23E15F8C00A1F151 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F456479D23E15FDF00A1F151 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		F45647A123E171A100A1F151 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		F45647A423E1B4CF00A1F151 /* OnboardingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingStoryboard.storyboard; sourceTree = "<group>"; };
+		F45647A623E1B4E500A1F151 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		F45647A823E1B79100A1F151 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		F45647AB23E1C95E00A1F151 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		F45647AD23E1C98400A1F151 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F45647AF23E1CA6A00A1F151 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		F45647B223E2B23800A1F151 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
+		F45647B423E2B24C00A1F151 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F45647B623E2B4DD00A1F151 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		F49FDF8523E0C7E90055D96D /* CountryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49FDF8823E0C7E90055D96D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49FDF9123E0C7EB0055D96D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +135,8 @@
 		F456479323E15EAD00A1F151 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				F45647B123E2B20900A1F151 /* Search */,
+				F45647AA23E1C90800A1F151 /* Settings */,
 				F45647A323E17AFC00A1F151 /* Onboarding */,
 				F456479423E15EBE00A1F151 /* Auth */,
 				F49FDFEA23E0E2430055D96D /* SideMenu */,
@@ -138,8 +158,28 @@
 		F45647A323E17AFC00A1F151 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				F45647A423E1B4CF00A1F151 /* OnboardingStoryboard.storyboard */,
+				F45647A623E1B4E500A1F151 /* OnboardingVC.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F45647AA23E1C90800A1F151 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F45647AB23E1C95E00A1F151 /* SettingsStoryboard.storyboard */,
+				F45647AD23E1C98400A1F151 /* SettingsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F45647B123E2B20900A1F151 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F45647B223E2B23800A1F151 /* SearchStoryboard.storyboard */,
+				F45647B423E2B24C00A1F151 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		F49FDF7C23E0C7E90055D96D = {
@@ -211,6 +251,9 @@
 				F49FDFBF23E0D7DF0055D96D /* AppCoordinator.swift */,
 				F49FDFEF23E0E2C60055D96D /* SideMenuCoordinator.swift */,
 				F456479D23E15FDF00A1F151 /* AuthCoordinator.swift */,
+				F45647A823E1B79100A1F151 /* OnboardingCoordinator.swift */,
+				F45647AF23E1CA6A00A1F151 /* SettingsCoordinator.swift */,
+				F45647B623E2B4DD00A1F151 /* SearchCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -401,10 +444,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45647B323E2B23800A1F151 /* SearchStoryboard.storyboard in Resources */,
+				F45647AC23E1C95E00A1F151 /* SettingsStoryboard.storyboard in Resources */,
 				F49FDFEC23E0E26A0055D96D /* SideMenu.storyboard in Resources */,
 				F456479823E15EF200A1F151 /* AuthStoryboard.storyboard in Resources */,
 				F49FDF9523E0C7EB0055D96D /* LaunchScreen.storyboard in Resources */,
 				F49FDF9223E0C7EB0055D96D /* Assets.xcassets in Resources */,
+				F45647A523E1B4CF00A1F151 /* OnboardingStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,23 +475,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45647B023E1CA6A00A1F151 /* SettingsCoordinator.swift in Sources */,
 				F49FDFD123E0D8320055D96D /* BaseCoordinator.swift in Sources */,
 				F49FDFD823E0D8320055D96D /* Presentable.swift in Sources */,
 				F49FDFF023E0E2C60055D96D /* SideMenuCoordinator.swift in Sources */,
+				F45647B723E2B4DD00A1F151 /* SearchCoordinator.swift in Sources */,
 				F49FDFDC23E0D8320055D96D /* ViewController+Coordinator.swift in Sources */,
 				F456479E23E15FDF00A1F151 /* AuthCoordinator.swift in Sources */,
+				F45647AE23E1C98400A1F151 /* SettingsVC.swift in Sources */,
 				F49FDFF523E0E8990055D96D /* SideMenuViewModel.swift in Sources */,
+				F45647B523E2B24C00A1F151 /* SearchViewController.swift in Sources */,
 				F49FDFC023E0D7DF0055D96D /* AppCoordinator.swift in Sources */,
 				F49FDFE923E0DBD10055D96D /* FactoryProtocol.swift in Sources */,
 				F49FDFDA23E0D8320055D96D /* CoordinatorFinishOutput.swift in Sources */,
 				F49FDFBD23E0D7640055D96D /* DependencyContainer.swift in Sources */,
 				F49FDFD223E0D8320055D96D /* DeepLinkOption.swift in Sources */,
+				F45647A923E1B79100A1F151 /* OnboardingCoordinator.swift in Sources */,
 				F49FDFDD23E0D8320055D96D /* Coordinator.swift in Sources */,
 				F49FDFD323E0D8320055D96D /* BaseViewControllerProtocol.swift in Sources */,
 				F49FDFF323E0E7910055D96D /* UIStoryboard.swift in Sources */,
 				F45647A223E171A100A1F151 /* RegisterVC.swift in Sources */,
 				F456479C23E15F8C00A1F151 /* LoginVC.swift in Sources */,
 				F49FDF8923E0C7E90055D96D /* AppDelegate.swift in Sources */,
+				F45647A723E1B4E500A1F151 /* OnboardingVC.swift in Sources */,
 				F49FDFDB23E0D8320055D96D /* LaunchInstructor.swift in Sources */,
 				F49FDFEE23E0E2870055D96D /* SideMenuViewController.swift in Sources */,
 				F49FDFDE23E0D8320055D96D /* Router.swift in Sources */,
@@ -615,6 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L964WAUV5R;
 				INFOPLIST_FILE = CountryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -632,6 +685,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L964WAUV5R;
 				INFOPLIST_FILE = CountryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

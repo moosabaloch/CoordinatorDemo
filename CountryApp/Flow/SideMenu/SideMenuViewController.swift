@@ -8,25 +8,38 @@
 
 import UIKit
 
-class SideMenuViewController: UIViewController {
+protocol DashboardControllerProtocol {
+    var onSettingsTap : Closure? {set get}
+    var onOpenSearchController : ClosureData<String>? {get set}
+}
 
+class SideMenuViewController: UIViewController , DashboardControllerProtocol {
+    
+    var onSettingsTap : Closure?
+    var onOpenSearchController : ClosureData<String>?
+    
     var viewModel : SideMenuViewModel?
+    
+    @IBOutlet private weak var textFeild : UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction private func onSettingsTapButton(_ sender : AnyObject){
+        self.onSettingsTap?()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction private func onGoToSearchButton(_ sender : AnyObject){
+        let count = (textFeild.text?.count ?? 0)
+        if count > 5 {
+            self.onOpenSearchController?(textFeild.text ?? "")
+        }else {
+            self.onOpenSearchController?(nil)
+        }
+        
+        
     }
-    */
-
+    
 }
