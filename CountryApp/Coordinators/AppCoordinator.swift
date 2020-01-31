@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppCoordinator: BaseCoordinator {
+class AppCoordinator: BaseCoordinator  {
     
     private let factory : Factory
     private let routerProtocol : RouterProtocol
@@ -19,7 +19,6 @@ class AppCoordinator: BaseCoordinator {
         self.factory = factory
         self.launchInstructor = launchInstructor
     }
-    
     
     override func start(with option: DeepLinkOption?) {
         if let _ = option {

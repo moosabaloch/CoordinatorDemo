@@ -8,39 +8,26 @@
 
 import UIKit
 
-protocol LoginProtocol {
-    var onLoginComplete : (()-> Void)? { get set }
-    var onBack : (()->Void)? {get set}
+protocol LoginProtocol :BaseViewControllerProtocol{
+    var onLoginComplete : Closure? { get set }
 }
 
 class LoginVC: UIViewController , LoginProtocol {
-    var onLoginComplete: (() -> Void)?
     
-    var onBack: (() -> Void)?
-    
+    var onNavigationBackButtonTap: Closure?
+    var onLoginComplete: Closure?
+    var onBack: Closure?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setSwipeBackNavigation()
     }
-    
     
     @IBAction private func onBackTap(_ sender : AnyObject) {
         self.onBack?()
     }
     
-    
     @IBAction private func onLoginTap(_ sender : AnyObject){
         self.onLoginComplete?()
     }
-    
-
 }
-
-//extension LoginVC : UIGestureRecognizerDelegate {
-//
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
-//}
-//self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-//self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true

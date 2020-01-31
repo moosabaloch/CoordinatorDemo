@@ -8,21 +8,18 @@
 
 import UIKit
 
-protocol RegisterProtocol {
-    var onRegisterComplete : (()-> Void)? {get set}
-    var onBack : (()-> Void)? {get set}
+protocol RegisterProtocol : BaseViewControllerProtocol{
+    var onRegisterComplete : Closure? {get set}
 }
 
 class RegisterVC: UIViewController , RegisterProtocol {
-    var onRegisterComplete: (() -> Void)?
     
-    var onBack: (() -> Void)?
-    
-
+    var onNavigationBackButtonTap: Closure?
+    var onRegisterComplete: Closure?
+    var onBack: Closure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction private func onBackButtonTap(_ sender : AnyObject ){

@@ -14,10 +14,8 @@ protocol DashboardControllerProtocol {
 }
 
 class SideMenuViewController: UIViewController , DashboardControllerProtocol {
-    
     var onSettingsTap : Closure?
     var onOpenSearchController : ClosureData<String>?
-    
     var viewModel : SideMenuViewModel?
     
     @IBOutlet private weak var textFeild : UITextField!
@@ -30,7 +28,6 @@ class SideMenuViewController: UIViewController , DashboardControllerProtocol {
         self.onSettingsTap?()
     }
     
-    
     @IBAction private func onGoToSearchButton(_ sender : AnyObject){
         let count = (textFeild.text?.count ?? 0)
         if count > 5 {
@@ -38,8 +35,6 @@ class SideMenuViewController: UIViewController , DashboardControllerProtocol {
         }else {
             self.onOpenSearchController?(nil)
         }
-        
-        
     }
     
 }

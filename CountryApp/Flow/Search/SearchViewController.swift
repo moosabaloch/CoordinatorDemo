@@ -8,15 +8,13 @@
 
 import UIKit
 
-protocol SearchViewControllerProtocol {
-    var onBack : Closure?  {get set}
-}
-
-class SearchViewController: UIViewController , SearchViewControllerProtocol {
+class SearchViewController: UIViewController , BaseViewControllerProtocol {
+    // MARK: BaseViewController closures.
+    var onNavigationBackButtonTap: Closure?
     var onBack: Closure?
 
+    // MARK: Variables
     @IBOutlet private weak var labelView: UILabel!
-    
     var predefineText : String = "No Text"
     
     override func viewDidLoad() {

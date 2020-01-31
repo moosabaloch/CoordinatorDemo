@@ -32,6 +32,12 @@ class SettingsCoordinator : BaseCoordinator , CoordinatorFinishOutput , Settings
         vc.onLogoutTap = {[unowned self] in
             self.logout?()
         }
+        vc.onNavigationBackButtonTap = {[weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.finishFlow?()
+        }
         routerProtocol.push(vc)
     }
     

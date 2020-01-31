@@ -14,7 +14,7 @@ enum CoordinatorData<T> {
     case someData(T) , noData
 }
 
-class BaseCoordinator: Coordinator {
+class BaseCoordinator: NSObject , Coordinator {
     
     // MARK: - Vars & Lets
     
@@ -27,6 +27,7 @@ class BaseCoordinator: Coordinator {
             if element === coordinator { return }
         }
         childCoordinators.append(coordinator)
+        //print("Child Coordinator Counts: \(childCoordinators.count)")
     }
     
     func removeDependency(_ coordinator: Coordinator?) {

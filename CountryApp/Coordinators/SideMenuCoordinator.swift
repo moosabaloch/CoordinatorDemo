@@ -34,7 +34,7 @@ class SideMenuCoordinator : BaseCoordinator , CoordinatorFinishOutput {
         vc.onOpenSearchController = {[unowned self] data in
             self.startSearchCoordinatorFlow(data: data)
         }
-        self.routerProtocol.setRootModule(vc, hideBar: true)
+        self.routerProtocol.setRootModule(vc, hideBar: false)
     }
     
     private func startSearchCoordinatorFlow(data : String?){
@@ -58,8 +58,6 @@ class SideMenuCoordinator : BaseCoordinator , CoordinatorFinishOutput {
     }
     
     
-    
-//SearchCoordinator
     private func startSettingsFlow(){
         let settingsCoordinator = self.factory.instantiateSettingsCoordinator(routerProtocol: routerProtocol)
         settingsCoordinator.finishFlow = {[unowned self , unowned settingsCoordinator] in

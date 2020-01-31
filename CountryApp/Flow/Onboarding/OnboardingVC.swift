@@ -8,23 +8,23 @@
 
 import UIKit
 
-protocol OnboardingProtocol {
-    var onTourComplete : (()->Void)? {get set}
-    var onTourSkip : (()->Void)? {get set}
+protocol OnboardingProtocol : BaseViewControllerProtocol {
+    var onTourComplete :  Closure? {get set}
+    var onTourSkip : Closure? {get set}
 }
 
 class OnboardingVC: UIViewController , OnboardingProtocol {
+    
     // MARK: Onboarding Protocol
-    var onTourComplete: (() -> Void)?
-    
-    var onTourSkip: (() -> Void)?
-    
+    var onTourComplete: Closure?
+    var onTourSkip: Closure?
+    var onNavigationBackButtonTap: Closure?    
+    var onBack: Closure?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction private func onSkipButtonTap(_ sender : AnyObject){
         self.onTourSkip?()
@@ -33,5 +33,4 @@ class OnboardingVC: UIViewController , OnboardingProtocol {
     @IBAction private func onFinishButtonTap(_ sender : AnyObject){
         self.onTourComplete?()
     }
-    
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-
-protocol BaseViewControllerProtocol: NSObjectProtocol, Presentable {
-    
+protocol BaseViewControllerProtocol: NSObjectProtocol {
+    var onNavigationBackButtonTap : Closure? {get set}
+    var onBack : Closure?  {get set}
 }

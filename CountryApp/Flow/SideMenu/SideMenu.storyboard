@@ -31,12 +31,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2j-Ts-sLL">
-                                <rect key="frame" x="20" y="249" width="374" height="34"/>
+                                <rect key="frame" x="20" y="284" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvj-1G-VBg">
-                                <rect key="frame" x="161" y="365" width="92" height="30"/>
+                                <rect key="frame" x="161" y="400" width="92" height="30"/>
                                 <state key="normal" title="Go To Search">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -49,10 +49,10 @@
                         <constraints>
                             <constraint firstItem="sEK-9E-7PC" firstAttribute="centerY" secondItem="zW7-eG-rY5" secondAttribute="centerY" id="66V-4M-PiH"/>
                             <constraint firstItem="zW7-eG-rY5" firstAttribute="trailing" secondItem="o2j-Ts-sLL" secondAttribute="trailing" constant="20" id="6va-Nb-GFq"/>
-                            <constraint firstItem="o2j-Ts-sLL" firstAttribute="top" secondItem="aWL-bo-QQf" secondAttribute="bottom" constant="64" id="KQo-wQ-tWt"/>
+                            <constraint firstItem="o2j-Ts-sLL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aWL-bo-QQf" secondAttribute="bottom" constant="2" id="KQo-wQ-tWt"/>
                             <constraint firstItem="sEK-9E-7PC" firstAttribute="centerX" secondItem="zW7-eG-rY5" secondAttribute="centerX" id="Lxa-oo-83X"/>
                             <constraint firstItem="Tvj-1G-VBg" firstAttribute="centerX" secondItem="sEK-9E-7PC" secondAttribute="centerX" id="V0j-PR-gXY"/>
-                            <constraint firstItem="sEK-9E-7PC" firstAttribute="top" secondItem="Tvj-1G-VBg" secondAttribute="bottom" constant="43" id="cOX-AT-nhr"/>
+                            <constraint firstItem="sEK-9E-7PC" firstAttribute="top" secondItem="Tvj-1G-VBg" secondAttribute="bottom" constant="8" id="cOX-AT-nhr"/>
                             <constraint firstItem="Tvj-1G-VBg" firstAttribute="top" secondItem="o2j-Ts-sLL" secondAttribute="bottom" priority="999" constant="82" id="nmz-KR-g3v"/>
                             <constraint firstItem="o2j-Ts-sLL" firstAttribute="leading" secondItem="zW7-eG-rY5" secondAttribute="leading" constant="20" id="pG1-ki-86p"/>
                             <constraint firstItem="aWL-bo-QQf" firstAttribute="top" secondItem="zW7-eG-rY5" secondAttribute="top" constant="120" id="qLH-Jg-UW1"/>

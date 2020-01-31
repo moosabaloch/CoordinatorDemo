@@ -14,3 +14,15 @@ extension UIViewController: Presentable {
         return self
     }
 }
+
+extension UIViewController : UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func setSwipeBackNavigation(_ swipeable : Bool = true) {
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = swipeable
+    }
+}
+

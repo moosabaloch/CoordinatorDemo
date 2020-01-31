@@ -38,6 +38,12 @@ class SearchCoordinator<T>: BaseCoordinator , CoordinatorFinishOutput {
                 self.router.popModule()
                 self.finishFlow?()
             }
+            vc.onNavigationBackButtonTap = { [weak self] in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.finishFlow?()
+            }
             self.router.push(vc)
             
             break
@@ -47,6 +53,12 @@ class SearchCoordinator<T>: BaseCoordinator , CoordinatorFinishOutput {
             vc.onBack = {[unowned self] in
                 self.router.popModule()
                 self.finishFlow?()
+            }
+            vc.onNavigationBackButtonTap = { [weak self] in
+                guard let strongSelf = self else {
+                    return
+                }
+                strongSelf.finishFlow?()
             }
             self.router.push(vc)
             break

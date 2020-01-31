@@ -8,18 +8,21 @@
 
 import UIKit
 
-protocol SettingsProtocol {
+protocol SettingsProtocol : BaseViewControllerProtocol{
     var onLogoutTap : (()-> Void)? {get set}
 }
 
 class SettingsVC: UIViewController , SettingsProtocol {
-    var onLogoutTap: (() -> Void)?
+    var onNavigationBackButtonTap: Closure?
+    
+    var onBack: Closure?
+    
+    var onLogoutTap: Closure?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setSwipeBackNavigation()
     }
 
     @IBAction private func onLogoutButtonTap(_ sender : AnyObject){
