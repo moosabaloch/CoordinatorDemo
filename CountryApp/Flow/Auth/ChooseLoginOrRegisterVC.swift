@@ -14,14 +14,12 @@ protocol ChooseLoginOrRegisterProtocol {
 }
 
 
-class ChooseLoginOrRegisterVC: UIViewController , ChooseLoginOrRegisterProtocol {
+class ChooseLoginOrRegisterVC: UIViewController , ChooseLoginOrRegisterProtocol  {
     var onLogin: (() -> Void)?
     
     var onRegister: (() -> Void)?
     
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

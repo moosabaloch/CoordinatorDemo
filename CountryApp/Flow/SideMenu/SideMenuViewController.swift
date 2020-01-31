@@ -13,7 +13,8 @@ protocol DashboardControllerProtocol {
     var onOpenSearchController : ClosureData<String>? {get set}
 }
 
-class SideMenuViewController: UIViewController , DashboardControllerProtocol {
+class SideMenuViewController: UIViewController , DashboardControllerProtocol  {
+    
     var onSettingsTap : Closure?
     var onOpenSearchController : ClosureData<String>?
     var viewModel : SideMenuViewModel?

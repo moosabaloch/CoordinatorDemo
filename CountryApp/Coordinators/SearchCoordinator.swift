@@ -31,7 +31,6 @@ class SearchCoordinator<T>: BaseCoordinator , CoordinatorFinishOutput {
     private func showSearchViewController(){
         switch data {
         case .someData(let val as String):
-            
             let vc = self.factory.instantiateSearchViewController()
             vc.predefineText = val
             vc.onBack = {[unowned self] in

@@ -20,9 +20,9 @@ typealias ViewControllerFactory
 class DependencyContainer {
     
     // MARK: - Initialization
-      init(rootController: UINavigationController) {
-          self.rootController = rootController
-      }
+    init(rootController: UINavigationController) {
+        self.rootController = rootController
+    }
     
     // MARK: - Vars & Lets
     private var rootController: UINavigationController
@@ -48,7 +48,7 @@ extension DependencyContainer : CoordinatorFactoryProtocol {
     func instantiateSearchCoordinator<T>(routerProtocol: RouterProtocol, data: CoordinatorData<T>) -> SearchCoordinator<T> {
         return SearchCoordinator<T>(routerProtocol: routerProtocol, factory: self, data: data)
     }
-
+    
     
     func instantiateAuthCoordinator(routerProtocol: RouterProtocol) -> AuthCoordinator {
         return AuthCoordinator(routerProtocol: routerProtocol, factory: self)
@@ -79,11 +79,7 @@ extension DependencyContainer : CoordinatorFactoryProtocol {
 // MARK: Dashboard Flow Factory implementation
 extension DependencyContainer : SideMenuViewControllerFactory {
     func instantiateSideMenuViewController() -> SideMenuViewController {
-         let sideMenuViewController = UIStoryboard
-            .sideMenu
-            .instantiateViewController(
-                withIdentifier: "SideMenuViewController") as! SideMenuViewController
-        
+        let sideMenuViewController = SideMenuViewController.instantiate(storyboard: UIStoryboard.sideMenu)
         sideMenuViewController.viewModel = SideMenuViewModel() // Can pass service DI
         return sideMenuViewController
     }
@@ -91,17 +87,14 @@ extension DependencyContainer : SideMenuViewControllerFactory {
 
 extension DependencyContainer : SearchViewControllerFactory {
     func instantiateSearchViewController() -> SearchViewController {
-        return UIStoryboard.search.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        return SearchViewController.instantiate(storyboard: UIStoryboard.search)
     }
 }
 
 // MARK: Onboarding Flow Factory implementation
 extension DependencyContainer : OnboardingControllerFactory {
     func instantiateOnboardingVC() -> OnboardingVC {
-        let onboardingVC = UIStoryboard
-                    .onboarding
-                    .instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
-        return onboardingVC
+        return OnboardingVC.instantiate(storyboard: UIStoryboard.onboarding)
     }
 }
 
@@ -109,7 +102,7 @@ extension DependencyContainer : OnboardingControllerFactory {
 extension DependencyContainer : SettingsControllerFactory {
     
     func instantiateSettingsVC() -> SettingsVC {
-        return UIStoryboard.settings.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
+        return SettingsVC.instantiate(storyboard: UIStoryboard.settings)
     }
 }
 
@@ -117,21 +110,14 @@ extension DependencyContainer : SettingsControllerFactory {
 extension DependencyContainer : AuthViewControllerFactory {
     
     func instantiateChooseLoginRegisterViewController() -> ChooseLoginOrRegisterVC {
-        let loginOrRegisterVC = UIStoryboard
-            .auth
-            .instantiateViewController(withIdentifier: "ChooseLoginOrRegisterVC") as! ChooseLoginOrRegisterVC
-        return loginOrRegisterVC
+        return ChooseLoginOrRegisterVC.instantiate(storyboard: UIStoryboard.auth)
     }
     
     func instantiateLoginViewController() -> LoginVC {
-        return UIStoryboard
-            .auth
-            .instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        return LoginVC.instantiate(storyboard: .auth)
     }
     
     func instantiateRegisterViewController() -> RegisterVC {
-        return UIStoryboard
-            .auth
-            .instantiateViewController(withIdentifier: "RegisterVC") as! RegisterVC
+        return RegisterVC.instantiate(storyboard: UIStoryboard.auth)
     }
 }
